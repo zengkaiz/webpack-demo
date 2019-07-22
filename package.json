@@ -1,0 +1,15 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "一个webpack的demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "zack",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
