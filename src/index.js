@@ -1,3 +1,4 @@
 require('./style.less')
+import { log } from  'utils'
 
-console.log('index')
+log('hello webpack')
