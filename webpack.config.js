@@ -79,9 +79,16 @@ module.exports = {
         }),
         new ExtractTextPlugin('index.css')
     ],
+    /**
+     * resolve-解析
+     * desc:设置模块如何被解析
+     */
     resolve: {
         alias: {
             utils$: path.resolve(__dirname, 'src/untils')
-        }
+        },
+        mainFiles: ['index'], // 可以配置其他默认使用的文件
+        modules: ['node_modules'],
+        mainFields: ['browser', 'module', 'main']
     }
 }
