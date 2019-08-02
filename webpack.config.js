@@ -90,5 +90,16 @@ module.exports = {
         mainFiles: ['index'], // 可以配置其他默认使用的文件
         modules: ['node_modules'],
         mainFields: ['browser', 'module', 'main']
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),      // 告诉服务器从哪里提供内容
+        compress: true,     // 一切服务都启用gzip 压缩
+        port: 9000,
+        proxy: {
+            '/api': {
+                target: "http://localhost:3000",    // 将URL中带有/api的请求代理到本地的3000端口服务商
+                pathRewrite: {'^/api': ''}      // 将URL中path部分的'api'移除掉
+            }
+        }
     }
 }
