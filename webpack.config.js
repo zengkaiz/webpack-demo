@@ -72,10 +72,15 @@ module.exports = {
      * desc:用于处理除了代码转换以外的其他构件任务
      */
     plugins: [
-        new UglifyPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'index.html', // 配置输出文件名和路径
-            template: 'src/index.html', // 配置文件模板
+        new HtmlWebpackPlugin({     // 打包输出html
+            title: 'webpack test app',   // 生成的html文件的标题
+            minify: {   // 压缩html文件
+                removeComments: true, //移除HTML中的注释
+                collapseWhitespace: true, // 删除空白符与换行符
+                miniFyCSS: true   // 压缩内联css
+            },
+            filename: 'index.html',    // 输出的html文件的名称
+            template: 'src/index.html', // 配置文件模板    
         }),
         new ExtractTextPlugin('index.css')
     ],
