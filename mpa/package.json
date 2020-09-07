@@ -1,0 +1,16 @@
+{
+  "name": "webpack-map",
+  "version": "1.0.0",
+  "description": "wabpack打包多页应用",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "zengkaiz",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

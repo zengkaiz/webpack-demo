@@ -1,2 +1,3 @@
-node_modules/
+basic/node_modules/
+mpa/node_modules/
 dist
