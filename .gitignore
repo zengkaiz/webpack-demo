@@ -1,6 +1,1 @@
-basic/node_modules/
-mpa/node_modules/
-env/node_modules/
-optimization/node_modules/
-source-map/node_modules/
-dist
+*/node_modules/

@@ -7,5 +7,8 @@ module.exports = smart(base,{
     new webpack.DefinePlugin({
       DEV: "'dev'"
     })
-  ]
+  ],
+  devServer: {
+    port: 3000
+  }
 })

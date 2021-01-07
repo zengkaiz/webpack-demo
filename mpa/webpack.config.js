@@ -11,6 +11,28 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname,'dist')
   },
+  // 优化项
+  optimization: {
+    // 分割代码块 多页的时候抽离公共代码
+    splitChunks: {
+      cacheGroups:{
+        // 公共代码抽离
+        common:{
+          chunks:'initial',
+          minSize: 0,
+          minChunks:2,
+        },
+        // 第三方代码抽离
+        vender: {
+          priority:1, // 权重
+          test: /node_modules/,
+          chunks:'initial',
+          minSize: 0,
+          minChunks:2,
+        }
+      }
+    }
+  },
   plugins:[
     new HtmlWebpackPlugin({
       template: './index.html',

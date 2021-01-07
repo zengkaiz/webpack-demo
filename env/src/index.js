@@ -1,11 +1,3 @@
-class Log{
-  constructor(){
-    console.log('出错22222wwww1111了')
-  }
-}
-
-let log = new Log()
-
 let url = ''
 if(DEV === 'dev'){
   url='dev'
@@ -14,3 +6,7 @@ if(DEV === 'dev'){
 }
 console.log(DEV)
 console.log(url)
+
+
+
+console.log(1111111)
